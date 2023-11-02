@@ -1,0 +1,164 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__wrapper {
+        background-color: #fff;
+
+    }
+
+    &__menu-block {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__contact {
+        display: flex;
+        gap: 20px;
+
+        &-prays {
+            background-color: #1A4570;
+            width: 164px;
+            height: 50px;
+            border-radius: 30px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            text-decoration: none;
+            border: 2px solid transparent;
+            transition: 0.5s;
+
+            &:hover {
+                color: #1A4570;
+                background-color: transparent;
+                border: 2px solid #1A4570;
+            }
+        }
+
+        &-social {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #1A4570;
+            color: #1A4570;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+
+            &:hover {
+                background-color: #1A4570;
+                color: #fff;
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 127px;
+        height: 47px;
+        border-radius: 25px;
+        border: 2px solid #1A4570;
+        gap: 10px;
+        font-weight: 600;
+        color: #1A4570;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: #1A4570;
+            color: #fff;
+        }
+
+        &:hover span::before,
+        &:hover span::after {
+            background-color: #fff;
+        }
+
+        span {
+            width: 30px;
+            height: 14px;
+            display: block;
+            position: relative;
+            margin-top: 2px;
+
+            &::before {
+                content: "";
+                transition: 0.5s;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: #1A4570;
+                position: absolute;
+            }
+
+            &::after {
+                content: "";
+                transition: 0.5s;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: #1A4570;
+                top: 10px;
+                position: absolute;
+
+            }
+        }
+    }
+}
+
+@media(max-width:903px) {
+    .header {
+        &__logo {
+            width: 200px;
+        }
+
+        &__contact {
+            display: none;
+            align-items: center;
+            &-prays {
+                width: 120px;
+                height: 45px;
+                font-size: 14px;
+            }
+            &-social {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+        &__menu-block {
+            gap: 20px;
+        }
+    }
+}
+
+@media(max-width:388px) {
+    .header {
+        &__menu {
+            width: 110px;
+            height: 40px;
+        }
+        &__menu-bars {
+            span {
+                width: 23px;
+            }
+        }
+    }
+}
+@media(max-width:364px) {
+    .header {
+       &__logo {
+        width: 173px;
+       }
+    }
+}
